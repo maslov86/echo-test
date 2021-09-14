@@ -1,0 +1,44 @@
+.Input {
+  margin-bottom: 15px;
+
+  label {
+    margin-bottom: 3px;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+    color: #232528;
+  }
+
+  > div {
+    position: relative;
+  }
+
+  input {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 0 0 5px;
+    width: 100%;
+    outline: none;
+    transition: all 300ms ease-in-out;
+  }
+
+  span {
+    color: #f01f30;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.InputIcon {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  color: #232528;
+  &:hover {
+    cursor: pointer;
+    opacity: .5;
+  }
+}

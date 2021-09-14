@@ -1,0 +1,19 @@
+.Layout {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  flex-grow: 1;
+  width: 100%;
+  background: linear-gradient(330deg, #ffffff 0%, #65deba 80%, rgb(0, 155, 187) 100%);
+
+  > div {
+    width: 100%;
+    max-width: 670px;
+    padding: 0 20px;
+  }
+
+  h1 {
+    color: #232528;
+    text-align: center;
+  }
+}

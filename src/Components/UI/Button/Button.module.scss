@@ -1,0 +1,38 @@
+.Button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #bebebe;
+  color: #fff;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  min-width: 33%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
+  }
+  &:disabled {
+    background: #ccc;
+    color: #000;
+    cursor: not-allowed;
+    opacity: 1;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.primary {
+  background: linear-gradient(150deg, #65deba 20%, #009bbb 100%);
+  color: #fff;
+}
