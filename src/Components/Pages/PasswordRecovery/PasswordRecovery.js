@@ -11,6 +11,9 @@ import {Alert} from '../../Alert/Alert'
 import InputMask from 'react-input-mask'
 import {PASSWORD_RECOVERY_FORM} from '../../../Consts/Consts'
 
+/**
+ * Компонент страницы восстановления пароля.
+ */
 export const PasswordRecovery = () => {
     const passwordRecoveryFormData = JSON.parse(sessionStorage.getItem(PASSWORD_RECOVERY_FORM))
     const [controls, setControls] = useState({
@@ -28,7 +31,6 @@ export const PasswordRecovery = () => {
     }, [])
 
     useEffect(() => {
-        console.log('phone', controls.phone)
         sessionStorage.setItem(PASSWORD_RECOVERY_FORM, JSON.stringify({
             phone: controls.phone,
         }))
@@ -57,6 +59,8 @@ export const PasswordRecovery = () => {
 
     /**
      * Проверка инпутов на пустоту.
+     *
+     * @returns {boolean}
      */
     const isControlsEmpty = () => {
         if (passwordRecoveryStep === 1) {

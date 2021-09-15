@@ -11,6 +11,9 @@ import {Alert} from '../../Alert/Alert'
 import InputMask from 'react-input-mask'
 import {REGISTRATION_FORM} from '../../../Consts/Consts'
 
+/**
+ * Компонент страницы регистрации.
+ */
 export const Registration = () => {
     const registrationFormData = JSON.parse(sessionStorage.getItem(REGISTRATION_FORM))
     const [controls, setControls] = useState({
@@ -53,6 +56,8 @@ export const Registration = () => {
 
     /**
      * Проверка инпутов на пустоту.
+     *
+     * @returns {boolean}
      */
     const isControlsEmpty = () => {
         return !(controls.firstName.value && controls.secondName.value && controls.phone.value && controls.password.value)

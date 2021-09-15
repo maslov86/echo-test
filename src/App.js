@@ -8,6 +8,9 @@ import styles from './App.module.scss'
 import {Layout} from './HOCs/Layout/Layout'
 import {useSelector} from 'react-redux'
 
+/**
+ * Корневой компонент приложения.
+ */
 function App() {
     const token = useSelector((state) => state.main.token)
 

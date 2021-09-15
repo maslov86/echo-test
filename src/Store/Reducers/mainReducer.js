@@ -69,6 +69,13 @@ const handlers = {
     DEFAULT: state => state,
 }
 
+/**
+ * Редюсер для ключа main.
+ *
+ * @param state Стэйт.
+ * @param action Экшен.
+ * @returns {{errorMessage: string, loading: boolean, token: *}|*}
+ */
 export const mainReducer = (state = initialState, action) => {
     const handler = handlers[action.type] || handlers.DEFAULT
     return handler(state, action)

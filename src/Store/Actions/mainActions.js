@@ -18,6 +18,7 @@ const URL = 'https://backend-front-test.dev.echo-company.ru/api'
  * Обработка запроса на Регистрацию.
  *
  * @param controlsData Значения инпутов.
+ * @returns {function(...[*]=)}
  */
 export const fetchRegistration = controlsData => {
     return async dispatch => {
@@ -44,6 +45,7 @@ export const fetchRegistration = controlsData => {
  * Обработка запроса на Авторизацию.
  *
  * @param controlsData Значения инпутов.
+ * @returns {function(...[*]=)}
  */
 export const fetchAuth = controlsData => {
     return async dispatch => {
@@ -69,6 +71,7 @@ export const fetchAuth = controlsData => {
  * Обработка запроса на Восстановление пароля. Шаг 1.
  *
  * @param controlsData Значения инпутов.
+ * @returns {function(...[*]=)}
  */
 export const fetchForgotStart = controlsData => {
     return async dispatch => {
@@ -92,6 +95,7 @@ export const fetchForgotStart = controlsData => {
  * Обработка запроса на Восстановление пароля. Шаг 2.
  *
  * @param controlsData Значения инпутов.
+ * @returns {function(...[*]=)}
  */
 export const fetchForgotEnd = controlsData => {
     return async dispatch => {
@@ -117,6 +121,7 @@ export const fetchForgotEnd = controlsData => {
  * Обработка запроса на Получение данных о пользователе.
  *
  * @param token Токен пользователя.
+ * @returns {function(...[*]=)}
  */
 export const fetchUserData = token => {
     return async dispatch => {
@@ -134,6 +139,8 @@ export const fetchUserData = token => {
 
 /**
  * Выход из аккаунта.
+ *
+ * @returns {function(...[*]=)}
  */
 export const logout = () => {
     return dispatch => {
@@ -144,6 +151,8 @@ export const logout = () => {
 
 /**
  * Очистка сообщения об ошибке.
+ *
+ * @returns {function(...[*]=)}
  */
 export const clearErrorMessage = () => {
     return dispatch => {
@@ -153,6 +162,8 @@ export const clearErrorMessage = () => {
 
 /**
  * Экшен успешной очистки сообщения об ошибке.
+ *
+ * @returns {{type: string}}
  */
 function clearErrorMessageSuccess() {
     return {
@@ -162,6 +173,10 @@ function clearErrorMessageSuccess() {
 
 /**
  * Экшен успешной обработки запроса на получение данных о пользователе.
+ *
+ * @param token Токен пользователя.
+ * @param firstName Имя пользователя.
+ * @returns {{firstName: *, type: string, token: *}}
  */
 function fetchUserDataSuccess(token, firstName) {
     return {
@@ -173,6 +188,9 @@ function fetchUserDataSuccess(token, firstName) {
 
 /**
  * Экшен успешной обработки запроса на восстановление пароля (шаг 1).
+ *
+ * @param phone Телефон пользователя.
+ * @returns {{phone: *, type: string}}
  */
 function forgotStartSuccess(phone) {
     return {
@@ -183,6 +201,9 @@ function forgotStartSuccess(phone) {
 
 /**
  * Экшен успешной обработки запроса на восстановление пароля (шаг 2).
+ *
+ * @param token Токен пользователя.
+ * @returns {{type: string, token: *}}
  */
 function forgotEndSuccess(token) {
     return {
@@ -193,6 +214,9 @@ function forgotEndSuccess(token) {
 
 /**
  * Экшен вывода сообщения об ошибке.
+ *
+ * @param message Сообщение об ошибке.
+ * @returns {{type: string, message: *}}
  */
 function logError(message) {
     return {
@@ -203,6 +227,9 @@ function logError(message) {
 
 /**
  * Экшен успешной обработки запроса на авторизацию.
+ *
+ * @param token Токен пользователя.
+ * @returns {{type: string, token: *}}
  */
 function authSuccess(token) {
     return {
@@ -213,6 +240,8 @@ function authSuccess(token) {
 
 /**
  * Экшен очистки стейта.
+ *
+ * @returns {{type: string}}
  */
 function clearState() {
     return {
@@ -222,6 +251,9 @@ function clearState() {
 
 /**
  * Экшен успешной обработки запроса на ргеистрацию.
+ *
+ * @param token Токен пользователя.
+ * @returns {{type: string, token: *}}
  */
 function registrationSuccess(token) {
     return {
@@ -232,6 +264,8 @@ function registrationSuccess(token) {
 
 /**
  * Экшен включения индикатора загрузки.
+ *
+ * @returns {{type: string}}
  */
 function loadingStart() {
     return {

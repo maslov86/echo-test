@@ -6,6 +6,9 @@ import {useDispatch, useSelector} from 'react-redux'
 import {fetchUserData, logout} from '../../../Store/Actions/mainActions'
 import {Alert} from '../../Alert/Alert'
 
+/**
+ * Компонент страницы личного кабинета.
+ */
 export const Profile = () => {
     const history = useHistory()
     const dispatch = useDispatch()

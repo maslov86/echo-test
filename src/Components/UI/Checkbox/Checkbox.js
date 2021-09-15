@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './Checkbox.module.scss'
 
+/**
+ * Компонент чекбокса.
+ *
+ * @param props Пропсы.
+ */
 const Checkbox = props => {
     const {label, onCheck} = props
     const htmlFor = `checkbox-${Math.random()}`

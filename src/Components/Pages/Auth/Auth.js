@@ -12,6 +12,9 @@ import {Alert} from '../../Alert/Alert'
 import InputMask from 'react-input-mask'
 import {AUTH_FORM} from '../../../Consts/Consts'
 
+/**
+ * Компонент страницы авторизации.
+ */
 export const Auth = () => {
     const authFormData = JSON.parse(sessionStorage.getItem(AUTH_FORM))
     const [controls, setControls] = useState({
@@ -75,6 +78,8 @@ export const Auth = () => {
 
     /**
      * Проверка инпутов на пустоту.
+     *
+     * @returns {boolean}
      */
     const isControlsEmpty = () => {
         return !(controls.phone.value && controls.password.value)

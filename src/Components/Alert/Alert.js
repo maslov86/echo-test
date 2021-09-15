@@ -1,8 +1,9 @@
 import React from 'react'
 import styles from './Alert.module.scss'
 
-export const Alert = props => {
-
-    return (
-        <div className={styles.Alert}>{props.children}</div>)
-}
+/**
+ * Компонент сообщения об ошибке.
+ *
+ * @param props Пропсы.
+ */
+export const Alert = props => <div className={styles.Alert}>{props.children}</div>

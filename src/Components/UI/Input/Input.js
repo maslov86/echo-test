@@ -1,6 +1,11 @@
 import React, {useState} from 'react'
 import styles from './Input.module.scss'
 
+/**
+ * Компонент инпута.
+ *
+ * @param props Пропсы.
+ */
 const Input = props => {
     const {type = 'text', label, value, onChange} = props
 
@@ -18,6 +23,8 @@ const Input = props => {
 
     /**
      * Формирование атрибутов инпута.
+     *
+     * @returns {{onChange: *, id: string, type: string, value: *}}
      */
     const getInputConfig = () => {
         const inputConfig = {

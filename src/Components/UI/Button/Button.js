@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './Button.module.scss'
 
+/**
+ * Компонент кнопки.
+ *
+ * @param props Пропсы.
+ */
 const Button = props => {
     const {type, onClick, disabled, children} = props
 
